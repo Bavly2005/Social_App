@@ -1,5 +1,5 @@
 import joi from "joi";
-import { isValidObjectId } from "../../middleware/validatiob.middleware";
+import { isValidObjectId } from "../../middleware/validatiob.middleware.js";
 
 export const getChat = joi
   .object({

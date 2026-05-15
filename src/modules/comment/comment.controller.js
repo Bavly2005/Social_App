@@ -70,7 +70,7 @@ router.post(
 router.delete(
   "/:id",
   isAuthenticated,
-  isAuthenticated(endPoints.hardDelete),
+  isAuthorized(endPoints.hardDelete),
   validation(commentSchemas.hardDelete),
   commentServices.hardDelete,
 );

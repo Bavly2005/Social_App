@@ -9,16 +9,15 @@ export const createComment = joi
   .object({
     postId: joi.custom(isValidObjectId).required(),
     text: joi.string(),
-    file: joi.object(fileObj),
+    file: fileObj,
   })
   .or("text", "file");
-
 // update
 export const updateComment = joi
   .object({
     id: joi.custom(isValidObjectId).required(),
     text: joi.string(),
-    file: joi.object(fileObj),
+    file: fileObj,
   })
   .or("text", "file");
 
@@ -43,7 +42,7 @@ export const addReply = joi
     id: joi.custom(isValidObjectId).required(),
     postId: joi.custom(isValidObjectId).required(),
     text: joi.string(),
-    file: joi.object(fileObj),
+    file: fileObj,
   })
   .or("text", "file");
 
